@@ -6,25 +6,54 @@
  * @return {object} `calculator` object that can be used
  */
 
+ var calculatorModule = (function() {
+
+ var memory = 0;
+ var total = 0; 
+ 
+ function load(x) {
+  total = x;
+  return total;
+ }
+
+ function getTotal() {
+  return total;
+ }
+
+ return Calculator = {
+
+  load: load,
+  getTotal: getTotal,
+  add: add,
+  subtract: subtract,
+  multiply: multiply,
+  divide: divide,
+  recallMemory: recallMemory,
+  saveMemory: saveMemory,
+  clearMemory: clearMemory,
+
+ };
+
+ })();
 
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
-
+ 
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
-
+ 
 
   /**
    * Sums the value passed in with `total`
    * @param { Number } x
    */
-
+ 
 
   /**
    * Subtracts the value passed in from `total`
@@ -58,6 +87,7 @@
   /**
    * Clear the value stored at `memory`
    */
+
 
   /**
    * Validation
