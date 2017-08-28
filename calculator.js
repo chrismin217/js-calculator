@@ -10,8 +10,15 @@
 
  var memory = 0;
  var total = 0; 
+
+ function validate(x) {
+  if(typeof x !== "number") {
+    throw new Error(); //print an error message
+  }
+ }
  
  function load(x) {
+  validate(x);
   total = x;
   return total;
  }
@@ -21,21 +28,25 @@
  }
 
  function add(x) {
+  validate(x);
   total += x;
   return total;
  }
 
  function subtract(x) {
+  validate(x);
   total -= x;
   return total;
  }
 
  function multiply(x) {
+  validate(x);
   total *= x;
   return total;
  }
 
  function divide(x) {
+  validate(x);
   total /= x;
   return total;
  }
