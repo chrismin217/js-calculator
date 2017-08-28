@@ -20,7 +20,39 @@
   return total;
  }
 
- return Calculator = {
+ function add(x) {
+  total += x;
+  return total;
+ }
+
+ function subtract(x) {
+  total -= x;
+  return total;
+ }
+
+ function multiply(x) {
+  total *= x;
+  return total;
+ }
+
+ function divide(x) {
+  total /= x;
+  return total;
+ }
+
+ function recallMemory() {
+  return memory;
+ }
+
+ function saveMemory() {
+  memory = total;
+ }
+
+ function clearMemory() {
+  memory = 0;
+ }
+
+ return calculator = {
 
   load: load,
   getTotal: getTotal,
@@ -34,7 +66,7 @@
 
  };
 
- })();
+ });
 
   /**
    * sets the `total` to the number passed in
